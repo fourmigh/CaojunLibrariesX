@@ -1,4 +1,4 @@
-package com.deepblue.library.seekbar;
+package org.caojun.library.seekbar;
 
 import android.content.Context;
 import android.graphics.Canvas;

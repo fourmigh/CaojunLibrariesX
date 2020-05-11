@@ -1,4 +1,4 @@
-package com.deepblue.library.seekbar;
+package org.caojun.library.seekbar;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -23,7 +23,6 @@ import android.view.ViewParent;
 import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
-
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.math.BigDecimal;

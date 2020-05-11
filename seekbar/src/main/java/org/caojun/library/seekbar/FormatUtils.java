@@ -1,4 +1,4 @@
-package com.deepblue.library.seekbar;
+package org.caojun.library.seekbar;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

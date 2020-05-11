@@ -1,4 +1,4 @@
-package com.deepblue.library.seekbar;
+package org.caojun.library.seekbar;
 
 /**
  * created by zhuangguangquan on 2018/6/3
