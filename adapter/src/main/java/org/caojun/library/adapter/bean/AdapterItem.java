@@ -1,7 +1,6 @@
-package com.deepblue.library.adapter.bean;
+package org.caojun.library.adapter.bean;
 
 import android.view.View;
-
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 

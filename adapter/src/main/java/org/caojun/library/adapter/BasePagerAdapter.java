@@ -1,4 +1,4 @@
-package com.deepblue.library.adapter;
+package org.caojun.library.adapter;
 
 import android.view.View;
 import android.view.ViewGroup;

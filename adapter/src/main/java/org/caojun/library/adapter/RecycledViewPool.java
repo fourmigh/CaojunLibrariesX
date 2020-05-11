@@ -1,4 +1,4 @@
-package com.deepblue.library.adapter;
+package org.caojun.library.adapter;
 
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.HashMap;

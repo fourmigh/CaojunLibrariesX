@@ -1,4 +1,4 @@
-package com.deepblue.library.adapter;
+package org.caojun.library.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -6,9 +6,9 @@ import androidx.databinding.ObservableList;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.deepblue.library.adapter.bean.AdapterItem;
-import com.deepblue.library.adapter.bean.IAdapter;
-import com.deepblue.library.adapter.utils.DataBindingJudgement;
+import org.caojun.library.adapter.bean.AdapterItem;
+import org.caojun.library.adapter.bean.IAdapter;
+import org.caojun.library.adapter.utils.DataBindingJudgement;
 import java.util.ArrayList;
 import java.util.List;
 

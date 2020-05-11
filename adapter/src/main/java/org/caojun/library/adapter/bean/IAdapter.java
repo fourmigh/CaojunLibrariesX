@@ -1,4 +1,4 @@
-package com.deepblue.library.adapter.bean;
+package org.caojun.library.adapter.bean;
 
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;

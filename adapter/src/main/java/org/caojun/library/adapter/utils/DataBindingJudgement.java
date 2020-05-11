@@ -1,4 +1,4 @@
-package com.deepblue.library.adapter.utils;
+package org.caojun.library.adapter.utils;
 
 /**
  * @author Kale
