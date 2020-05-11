@@ -1,2 +1,2 @@
 rootProject.name='CaojunLibrariesX'
-include ':app', ':adapter', ':dialog', ':klog', ':seekbar', ':rangeseekbar'
+include ':app', ':adapter', ':dialog', ':klog', ':seekbar', ':rangeseekbar', ':dimenadaptation'
