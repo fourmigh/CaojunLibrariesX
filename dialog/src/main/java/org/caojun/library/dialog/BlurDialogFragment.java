@@ -1,4 +1,4 @@
-package com.deepblue.library.dialog;
+package org.caojun.library.dialog;
 
 import android.annotation.TargetApi;
 import android.app.Activity;

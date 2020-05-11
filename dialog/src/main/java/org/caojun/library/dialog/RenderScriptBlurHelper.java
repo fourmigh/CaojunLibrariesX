@@ -1,4 +1,4 @@
-package com.deepblue.library.dialog;
+package org.caojun.library.dialog;
 
 import android.content.Context;
 import android.graphics.Bitmap;

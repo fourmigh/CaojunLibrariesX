@@ -1,11 +1,10 @@
-package com.deepblue.library.dialog;
+package org.caojun.library.dialog;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.WindowManager;
-
 import androidx.appcompat.widget.Toolbar;
 
 /**
