@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="阿">
+        <item>阝可</item>
+    </string-array>
+
+    <string-array name="啊">
+        <item>口阿</item>
+    </string-array>
+
+    <string-array name="大">
+        <item>一人</item>
+    </string-array>
+
+    <string-array name="天">
+        <item>一大</item>
+    </string-array>
+
+    <string-array name="矢">
+        <item>丿天</item>
+    </string-array>
+
+    <string-array name="矣">
+        <item>厶矢</item>
+    </string-array>
+
+    <string-array name="埃">
+        <item>土矣</item>
+    </string-array>
+
+    <string-array name="挨">
+        <item>扌矣</item>
+    </string-array>
+
+    <string-array name="艹">
+        <item>十十</item>
+    </string-array>
+
+    <string-array name="艾">
+        <item>艹乂</item>
+    </string-array>
+
+    <string-array name="哎">
+        <item>口艾</item>
+    </string-array>
+
+    <string-array name="哀">
+        <item>衣口</item>
+    </string-array>
+
+    <string-array name="岂">
+        <item>山己</item>
+    </string-array>
+
+    <string-array name="皑">
+        <item>白岂</item>
+    </string-array>
+</resources>

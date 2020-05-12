@@ -1,2 +1,3 @@
 rootProject.name='CaojunLibrariesX'
 include ':app', ':adapter', ':dialog', ':klog', ':seekbar', ':rangeseekbar', ':dimenadaptation'
+include ':sinogram'
