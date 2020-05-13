@@ -22,7 +22,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:29.0.0'
+    api 'com.android.support:appcompat-v7:29.0.0'
     api 'com.android.databinding:baseLibrary:4.1.0-alpha09'
-    implementation "com.android.support:recyclerview-v7:29.0.0"
+    api "com.android.support:recyclerview-v7:29.0.0"
 }

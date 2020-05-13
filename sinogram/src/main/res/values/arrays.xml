@@ -1,58 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="阿">
+        <item>左右</item>
         <item>阝可</item>
+        <item>耳可</item>
     </string-array>
 
     <string-array name="啊">
+        <item>左右</item>
         <item>口阿</item>
     </string-array>
 
     <string-array name="大">
+        <item>上下</item>
         <item>一人</item>
     </string-array>
 
     <string-array name="天">
+        <item>上下</item>
         <item>一大</item>
     </string-array>
 
     <string-array name="矢">
+        <item>上下</item>
         <item>丿天</item>
     </string-array>
 
     <string-array name="矣">
+        <item>上下</item>
         <item>厶矢</item>
     </string-array>
 
     <string-array name="埃">
+        <item>左右</item>
         <item>土矣</item>
     </string-array>
 
     <string-array name="挨">
+        <item>左右</item>
         <item>扌矣</item>
     </string-array>
 
     <string-array name="艹">
+        <item>左右</item>
         <item>十十</item>
     </string-array>
 
     <string-array name="艾">
+        <item>上下</item>
         <item>艹乂</item>
     </string-array>
 
     <string-array name="哎">
+        <item>左右</item>
         <item>口艾</item>
     </string-array>
 
     <string-array name="哀">
+        <item>左右</item>
         <item>衣口</item>
+        <item>口衣</item>
     </string-array>
 
     <string-array name="岂">
+        <item>上下</item>
         <item>山己</item>
     </string-array>
 
     <string-array name="皑">
+        <item>左右</item>
         <item>白岂</item>
+    </string-array>
+    
+    <string-array name="吅">
+        <item>左右</item>
+        <item>口口</item>
+    </string-array>
+
+    <string-array name="品">
+        <item>上下</item>
+        <item>口吅</item>
+    </string-array>
+    
+    <string-array name="癌">
+        <item>上下</item>
+        <item>疒品山</item>
+    </string-array>
+
+    <string-array name="日">
+        <item>上下</item>
+        <item>口一</item>
+    </string-array>
+
+    <string-array name="曷">
+        <item>上下</item>
+        <item>日匃</item>
+    </string-array>
+
+    <string-array name="言">
+        <item>上下</item>
+        <item>丶一一一口</item>
+    </string-array>
+
+    <string-array name="谒">
+        <item>左右</item>
+        <item>讠曷</item>
+        <item>言曷</item>
+    </string-array>
+
+    <string-array name="蔼">
+        <item>上下</item>
+        <item>艹谒</item>
+    </string-array>
+
+    <string-array name="委">
+        <item>上下</item>
+        <item>禾女</item>
+    </string-array>
+
+    <string-array name="矮">
+        <item>左右</item>
+        <item>矢委</item>
+    </string-array>
+
+    <string-array name="石">
+        <item>上下</item>
+        <item>一丿口</item>
+    </string-array>
+
+    <string-array name="旦">
+        <item>上下</item>
+        <item>日一</item>
+    </string-array>
+
+    <string-array name="旦寸">
+        <item>上下</item>
+        <item>旦寸</item>
+    </string-array>
+
+    <string-array name="碍">
+        <item>左右</item>
+        <item>石旦寸</item>
+    </string-array>
+
+    <string-array name="友">
+        <item>上下</item>
+        <item>一丿又</item>
+    </string-array>
+
+    <string-array name="爱">
+        <item>上下</item>
+        <item>爫冖友</item>
+    </string-array>
+
+    <string-array name="益">
+        <item>上下</item>
+        <item>丷一八皿</item>
+    </string-array>
+
+    <string-array name="隘">
+        <item>左右</item>
+        <item>阝益</item>
+        <item>耳益</item>
+    </string-array>
+
+    <string-array name="安">
+        <item>上下</item>
+        <item>宀女</item>
+    </string-array>
+
+    <string-array name="中">
+        <item>上下</item>
+        <item>口丨</item>
+        <item>丨口</item>
+    </string-array>
+
+    <string-array name="革">
+        <item>上下</item>
+        <item>廿中一</item>
+    </string-array>
+
+    <string-array name="鞍">
+        <item>左右</item>
+        <item>革安</item>
     </string-array>
 </resources>
