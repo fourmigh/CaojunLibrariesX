@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.socks.library.KLog
 import org.caojun.library.R
-import org.caojun.sinogram.HanziUtils
+import org.caojun.sinogram.HanziSplitUtils
 
 class HomeFragment : Fragment() {
 
@@ -31,7 +31,7 @@ class HomeFragment : Fragment() {
             textView.text = it
         })
 
-        val array = HanziUtils.getStringArray(this.requireActivity(), "日")
+        val array = HanziSplitUtils.getStringArray(this.requireActivity(), "日")
         if (array == null) {
             KLog.d("HanziUtils", "null")
         } else {

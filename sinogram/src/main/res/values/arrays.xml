@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="root">
+        <item>丶</item>
+        <item>一</item>
+        <item>亠</item>
+        <item>丨</item>
+        <item>口</item>
+        <item>阝</item>
+        <item>耳</item>
+        <item>人</item>
+        <item>亻</item>
+        <item>丿</item>
+        <item>厶</item>
+        <item>扌</item>
+        <item>手</item>
+        <item>乂</item>
+        <item>讠</item>
+        <item>言</item>
+        <item>疒</item>
+        <item>山</item>
+        <item>寸</item>
+        <item>宀</item>
+        <item>女</item>
+        <item>廿</item>
+        <item>气</item>
+        <item>电</item>
+    </string-array>
+
     <string-array name="阿">
         <item>左右</item>
         <item>阝可</item>
@@ -39,6 +66,12 @@
     <string-array name="挨">
         <item>左右</item>
         <item>扌矣</item>
+        <item>手矣</item>
+    </string-array>
+
+    <string-array name="十">
+        <item>上下</item>
+        <item>一丨</item>
     </string-array>
 
     <string-array name="艹">
@@ -60,6 +93,11 @@
         <item>左右</item>
         <item>衣口</item>
         <item>口衣</item>
+    </string-array>
+
+    <string-array name="白">
+        <item>上下</item>
+        <item>丿日</item>
     </string-array>
 
     <string-array name="岂">
@@ -97,9 +135,14 @@
         <item>日匃</item>
     </string-array>
 
+    <string-array name="亠">
+        <item>上下</item>
+        <item>丶一</item>
+    </string-array>
+
     <string-array name="言">
         <item>上下</item>
-        <item>丶一一一口</item>
+        <item>亠一一口</item>
     </string-array>
 
     <string-array name="谒">
@@ -156,6 +199,7 @@
     <string-array name="益">
         <item>上下</item>
         <item>丷一八皿</item>
+        <item>八一八皿</item>
     </string-array>
 
     <string-array name="隘">
@@ -183,5 +227,113 @@
     <string-array name="鞍">
         <item>左右</item>
         <item>革安</item>
+    </string-array>
+
+    <string-array name="氨">
+        <item>上下</item>
+        <item>气安</item>
+    </string-array>
+
+    <string-array name="俺">
+        <item>左右</item>
+        <item>亻奄</item>
+        <item>人奄</item>
+    </string-array>
+
+    <string-array name="奄">
+        <item>上下</item>
+        <item>大电</item>
+    </string-array>
+
+    <string-array name="按">
+        <item>左右</item>
+        <item>扌安</item>
+        <item>手安</item>
+    </string-array>
+
+    <string-array name="立">
+        <item>上下</item>
+        <item>亠丷一</item>
+        <item>亠八一</item>
+    </string-array>
+
+    <string-array name="音">
+        <item>上下</item>
+        <item>立日</item>
+    </string-array>
+
+    <string-array name="暗">
+        <item>左右</item>
+        <item>日音</item>
+    </string-array>
+
+    <string-array name="干">
+        <item>上下</item>
+        <item>一十</item>
+    </string-array>
+
+    <string-array name="厈">
+        <item>上下</item>
+        <item>厂干</item>
+    </string-array>
+
+    <string-array name="岸">
+        <item>上下</item>
+        <item>山厈</item>
+    </string-array>
+
+    <string-array name="胺">
+        <item>左右</item>
+        <item>月安</item>
+    </string-array>
+
+    <string-array name="木">
+        <item>上下</item>
+        <item>十八</item>
+    </string-array>
+
+    <string-array name="案">
+        <item>上下</item>
+        <item>安木</item>
+    </string-array>
+
+    <string-array name="亢">
+        <item>上下</item>
+        <item>亠几</item>
+    </string-array>
+
+    <string-array name="肮">
+        <item>左右</item>
+        <item>月亢</item>
+    </string-array>
+
+    <string-array name="盎">
+        <item>上下</item>
+        <item>央皿</item>
+    </string-array>
+
+    <string-array name="灬">
+        <item>左右</item>
+        <item>丶丶丶丶</item>
+    </string-array>
+
+    <string-array name="熬">
+        <item>上下</item>
+        <item>敖灬</item>
+    </string-array>
+
+    <string-array name="羽">
+        <item>左右</item>
+        <item>习习</item>
+    </string-array>
+
+    <string-array name="皋">
+        <item>上下</item>
+        <item>白大十</item>
+    </string-array>
+
+    <string-array name="翱">
+        <item>左右</item>
+        <item>皋羽</item>
     </string-array>
 </resources>
