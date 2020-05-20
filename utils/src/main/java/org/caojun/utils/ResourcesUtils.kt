@@ -63,6 +63,19 @@ object ResourcesUtils {
         return context.resources.getDimensionPixelOffset(resId)
     }
 
+    fun getDimension(context: Context, resName: String, defValue: Int): Float {
+        val resId = getDimenId(context, resName, defValue)
+        return getDimension(context, resId)
+    }
+
+    fun getDimension(context: Context, resId: Int): Float {
+        return try {
+            context.resources.getDimension(resId)
+        } catch (e: Exception) {
+            0F
+        }
+    }
+
     fun getStringArray(context: Context, resId: Int): Array<String>? {
         return try {
             context.resources.getStringArray(resId)

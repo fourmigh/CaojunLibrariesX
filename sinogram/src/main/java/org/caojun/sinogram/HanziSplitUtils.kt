@@ -19,4 +19,12 @@ object HanziSplitUtils {
             null
         }
     }
+
+    fun getHanzi(context: Context, vararg hanzis: String): Array<String>? {
+        val sb = StringBuffer()
+        for (i in hanzis.indices) {
+            sb.append(hanzis[i])
+        }
+        return getStringArray(context, sb.toString())
+    }
 }
