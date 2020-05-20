@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左表情" />
+
+            <Button
+                android:id="@+id/btnRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="右表情" />
+
+            <Button
+                android:id="@+id/btnBlinkLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="眨左眼" />
+
+            <Button
+                android:id="@+id/btnBlinkRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="眨右眼" />
+
+            <Button
+                android:id="@+id/btnMouthLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左撇嘴" />
+
+            <Button
+                android:id="@+id/btnMouthRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="右撇嘴" />
+
+            <Button
+                android:id="@+id/btnEyebrowLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左眉毛" />
+
+            <Button
+                android:id="@+id/btnEyebrowRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="右眉毛" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <org.caojun.expression.BlinkExpression
+        android:id="@+id/blinkExpression"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

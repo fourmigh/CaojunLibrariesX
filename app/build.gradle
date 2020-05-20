@@ -50,4 +50,5 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.2.2'
     implementation project(':klog')
     implementation project(':sinogram')
+    implementation project(':expression')
 }

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivNose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_nose"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.547" />
+
+    <ImageView
+        android:id="@+id/ivFaceLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_face_left"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintBottom_toBottomOf="@id/ivNose"
+        app:layout_constraintEnd_toStartOf="@id/ivNose"
+        app:layout_constraintTop_toTopOf="@+id/ivNose" />
+
+    <ImageView
+        android:id="@+id/ivFaceRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_face_right"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintBottom_toBottomOf="@id/ivNose"
+        app:layout_constraintStart_toEndOf="@id/ivNose"
+        app:layout_constraintTop_toTopOf="@id/ivNose" />
+
+    <ImageView
+        android:id="@+id/ivMouth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:src="@drawable/ic_mouth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivNose" />
+
+    <ImageView
+        android:id="@+id/ivEyeLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_eye"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintVertical_bias="0.47"
+        app:layout_constraintBottom_toBottomOf="@id/ivFaceLeft"
+        app:layout_constraintEnd_toEndOf="@id/ivFaceLeft"
+        app:layout_constraintStart_toStartOf="@id/ivFaceLeft"
+        app:layout_constraintTop_toTopOf="@id/ivFaceLeft" />
+
+    <ImageView
+        android:id="@+id/ivEyeRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_eye"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintVertical_bias="0.47"
+        app:layout_constraintBottom_toBottomOf="@id/ivFaceRight"
+        app:layout_constraintEnd_toEndOf="@id/ivFaceRight"
+        app:layout_constraintStart_toStartOf="@id/ivFaceRight"
+        app:layout_constraintTop_toTopOf="@id/ivFaceRight" />
+
+    <ImageView
+        android:id="@+id/ivEyebrowLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_eyebrow_left"
+        app:layout_constraintBottom_toTopOf="@id/ivFaceLeft"
+        app:layout_constraintEnd_toEndOf="@id/ivFaceLeft"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="@id/ivFaceLeft"
+        app:layout_constraintTop_toTopOf="@id/ivFaceLeft" />
+
+    <ImageView
+        android:id="@+id/ivEyebrowRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_eyebrow_right"
+        app:layout_constraintBottom_toTopOf="@id/ivFaceRight"
+        app:layout_constraintEnd_toEndOf="@id/ivFaceRight"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="@id/ivFaceRight"
+        app:layout_constraintTop_toTopOf="@id/ivFaceRight" />
+</androidx.constraintlayout.widget.ConstraintLayout>

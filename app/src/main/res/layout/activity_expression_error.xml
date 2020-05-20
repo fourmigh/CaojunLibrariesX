@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnLeftClockwise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左眼珠顺时针" />
+
+            <Button
+                android:id="@+id/btnLeftAntiClockwise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左眼珠逆时针" />
+
+            <Button
+                android:id="@+id/btnRightClockwise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="右眼珠顺时针" />
+
+            <Button
+                android:id="@+id/btnRightAntiClockwise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="右眼珠逆时针" />
+
+            <Button
+                android:id="@+id/btnLeftBlink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左眨眼" />
+
+            <Button
+                android:id="@+id/btnRightBlink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="右眨眼" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <org.caojun.expression.ErrorExpression
+        android:id="@+id/errorExpression"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
