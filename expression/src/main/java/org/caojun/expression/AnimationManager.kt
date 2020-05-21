@@ -53,7 +53,7 @@ class AnimationManager {
             fromX: Float, toX: Float, fromY: Float, toY: Float,
             pivotXType: Int, pivotXValue: Float,
             pivotYType: Int, pivotYValue: Float,
-            duration: Long, repeatCount: Int, repeatMode: Int
+            duration: Long, repeatCount: Int, repeatMode: Int = Animation.RESTART
         ): Builder {
             scaleAnimation = ScaleAnimation(
                 fromX,
@@ -78,7 +78,7 @@ class AnimationManager {
             fromDegrees: Float, toDegrees: Float,
             pivotXType: Int, pivotXValue: Float,
             pivotYType: Int, pivotYValue: Float,
-            duration: Long, repeatCount: Int, repeatMode: Int
+            duration: Long, repeatCount: Int, repeatMode: Int = Animation.RESTART
         ): Builder {
             rotateAnimation = RotateAnimation(
                 fromDegrees,
@@ -102,7 +102,7 @@ class AnimationManager {
             toXType: Int, toXValue: Float,
             fromYType: Int, fromYValue: Float,
             toYType: Int, toYValue: Float,
-            duration: Long, repeatCount: Int, repeatMode: Int
+            duration: Long, repeatCount: Int, repeatMode: Int = Animation.RESTART
         ): Builder {
             translateAnimation = TranslateAnimation(
                 fromXType, fromXValue,

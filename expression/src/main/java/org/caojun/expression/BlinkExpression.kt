@@ -4,9 +4,6 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.animation.Animation
-import android.view.animation.RotateAnimation
-import android.view.animation.ScaleAnimation
-import android.view.animation.TranslateAnimation
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import org.jetbrains.anko.runOnUiThread
@@ -32,80 +29,94 @@ class BlinkExpression : RelativeLayout {
     private var isRightBlink = false
     private var isLeftBlinkAnimationStarted = false
     private var isRightBlinkAnimationStarted = false
-    private val saLeftBlink =
-        ScaleAnimation(
-            1.0f,
-            1.0f,
-            1.0f,
-            0.1f,
-            Animation.RELATIVE_TO_SELF,
-            1f,
-            Animation.RELATIVE_TO_SELF,
-            0.5f
-        )
-    private val saRightBlink =
-        ScaleAnimation(
-            1.0f,
-            1.0f,
-            1.0f,
-            0.1f,
-            Animation.RELATIVE_TO_SELF,
-            1f,
-            Animation.RELATIVE_TO_SELF,
-            0.5f
-        )
+    private val saLeftBlink = AnimationManager.Builder().setScaleAnimation(
+        1.0f,
+        1.0f,
+        1.0f,
+        0.1f,
+        Animation.RELATIVE_TO_SELF,
+        1f,
+        Animation.RELATIVE_TO_SELF,
+        0.5f,
+        DURATION,
+        REPEAT_COUNT,
+        Animation.REVERSE
+    ).create()
+    private val saRightBlink = AnimationManager.Builder().setScaleAnimation(
+        1.0f,
+        1.0f,
+        1.0f,
+        0.1f,
+        Animation.RELATIVE_TO_SELF,
+        1f,
+        Animation.RELATIVE_TO_SELF,
+        0.5f,
+        DURATION,
+        REPEAT_COUNT,
+        Animation.REVERSE
+    ).create()
 
     //左撇嘴
     private var isLeftTilting = false
     private var isLeftTiltingAnimationStarted = false
-    private val raLeftTilting =
-        RotateAnimation(
-            0F,
-            30F,
-            Animation.RELATIVE_TO_SELF,
-            0.5F,
-            Animation.RELATIVE_TO_SELF,
-            -1F
-        )
+    private val raLeftTilting = AnimationManager.Builder().setRotateAnimation(
+        0F,
+        30F,
+        Animation.RELATIVE_TO_SELF,
+        0.5F,
+        Animation.RELATIVE_TO_SELF,
+        -1F,
+        DURATION,
+        REPEAT_COUNT,
+        Animation.REVERSE
+    ).create()
 
     //右撇嘴
     private var isRightTilting = false
     private var isRightTiltingAnimationStarted = false
-    private val raRightTilting =
-        RotateAnimation(
-            0F,
-            -30F,
-            Animation.RELATIVE_TO_SELF,
-            0.5F,
-            Animation.RELATIVE_TO_SELF,
-            -1F
-        )
+    private val raRightTilting = AnimationManager.Builder().setRotateAnimation(
+        0F,
+        -30F,
+        Animation.RELATIVE_TO_SELF,
+        0.5F,
+        Animation.RELATIVE_TO_SELF,
+        -1F,
+        DURATION,
+        REPEAT_COUNT,
+        Animation.REVERSE
+    ).create()
 
     //眉毛上下位移
     private var isLeftMove = false
     private var isRightMove = false
     private var isLeftMoveAnimationStarted = false
     private var isRightMoveAnimationStarted = false
-    private val taLeftMove =
-        TranslateAnimation(
-            Animation.RELATIVE_TO_PARENT,
-            0F,
-            Animation.RELATIVE_TO_PARENT,
-            0F,
-            Animation.RELATIVE_TO_PARENT,
-            0F,
-            Animation.RELATIVE_TO_PARENT,
-            0.02F)
-    private val taRightMove =
-        TranslateAnimation(
-            Animation.RELATIVE_TO_PARENT,
-            0F,
-            Animation.RELATIVE_TO_PARENT,
-            0F,
-            Animation.RELATIVE_TO_PARENT,
-            0F,
-            Animation.RELATIVE_TO_PARENT,
-            0.02F)
+    private val taLeftMove = AnimationManager.Builder().setTranslateAnimation(
+        Animation.RELATIVE_TO_PARENT,
+        0F,
+        Animation.RELATIVE_TO_PARENT,
+        0F,
+        Animation.RELATIVE_TO_PARENT,
+        0F,
+        Animation.RELATIVE_TO_PARENT,
+        0.02F,
+        DURATION,
+        REPEAT_COUNT,
+        Animation.REVERSE
+    ).create()
+    private val taRightMove = AnimationManager.Builder().setTranslateAnimation(
+        Animation.RELATIVE_TO_PARENT,
+        0F,
+        Animation.RELATIVE_TO_PARENT,
+        0F,
+        Animation.RELATIVE_TO_PARENT,
+        0F,
+        Animation.RELATIVE_TO_PARENT,
+        0.02F,
+        DURATION,
+        REPEAT_COUNT,
+        Animation.REVERSE
+    ).create()
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
@@ -120,12 +131,6 @@ class BlinkExpression : RelativeLayout {
         ivMouth = findViewById(R.id.ivMouth)
 
         //眨眼
-        saLeftBlink.duration = DURATION
-        saLeftBlink.repeatCount = REPEAT_COUNT
-        saLeftBlink.repeatMode = Animation.REVERSE
-        saRightBlink.duration = DURATION
-        saRightBlink.repeatCount = REPEAT_COUNT
-        saRightBlink.repeatMode = Animation.REVERSE
         saLeftBlink.setAnimationListener(object :
             Animation.AnimationListener {
             override fun onAnimationStart(animation: Animation) {
@@ -135,7 +140,7 @@ class BlinkExpression : RelativeLayout {
             override fun onAnimationEnd(animation: Animation) {
                 isLeftBlinkAnimationStarted = false
                 if (isLeftBlink) {
-                    ivEyeLeft?.startAnimation(saLeftBlink)
+                    ivEyeLeft?.startAnimation(saLeftBlink.animation())
                 }
             }
 
@@ -150,7 +155,7 @@ class BlinkExpression : RelativeLayout {
             override fun onAnimationEnd(animation: Animation) {
                 isRightBlinkAnimationStarted = false
                 if (isRightBlink) {
-                    ivEyeRight?.startAnimation(saRightBlink)
+                    ivEyeRight?.startAnimation(saRightBlink.animation())
                 }
             }
 
@@ -158,9 +163,6 @@ class BlinkExpression : RelativeLayout {
         })
 
         //左撇嘴
-        raLeftTilting.duration = DURATION
-        raLeftTilting.repeatCount = REPEAT_COUNT
-        raLeftTilting.repeatMode = Animation.REVERSE
         raLeftTilting.setAnimationListener(object :
             Animation.AnimationListener {
             override fun onAnimationStart(animation: Animation) {
@@ -172,10 +174,10 @@ class BlinkExpression : RelativeLayout {
                 isLeftTiltingAnimationStarted = false
                 when {
                     isLeftTilting -> {
-                        ivMouth?.startAnimation(raLeftTilting)
+                        ivMouth?.startAnimation(raLeftTilting.animation())
                     }
                     isRightTilting -> {
-                        ivMouth?.startAnimation(raRightTilting)
+                        ivMouth?.startAnimation(raRightTilting.animation())
                     }
                     else -> {
                         ivMouth?.setImageResource(R.drawable.ic_mouth)
@@ -187,9 +189,6 @@ class BlinkExpression : RelativeLayout {
         })
 
         //右撇嘴
-        raRightTilting.duration = DURATION
-        raRightTilting.repeatCount = REPEAT_COUNT
-        raRightTilting.repeatMode = Animation.REVERSE
         raRightTilting.setAnimationListener(object :
             Animation.AnimationListener {
             override fun onAnimationStart(animation: Animation) {
@@ -201,10 +200,10 @@ class BlinkExpression : RelativeLayout {
                 isRightTiltingAnimationStarted = false
                 when {
                     isRightTilting -> {
-                        ivMouth?.startAnimation(raRightTilting)
+                        ivMouth?.startAnimation(raRightTilting.animation())
                     }
                     isLeftTilting -> {
-                        ivMouth?.startAnimation(raLeftTilting)
+                        ivMouth?.startAnimation(raLeftTilting.animation())
                     }
                     else -> {
                         ivMouth?.setImageResource(R.drawable.ic_mouth)
@@ -216,12 +215,6 @@ class BlinkExpression : RelativeLayout {
         })
 
         //眉毛移动
-        taLeftMove.duration = DURATION
-        taLeftMove.repeatCount = REPEAT_COUNT
-        taLeftMove.repeatMode = Animation.REVERSE
-        taRightMove.duration = DURATION
-        taRightMove.repeatCount = REPEAT_COUNT
-        taRightMove.repeatMode = Animation.REVERSE
         taLeftMove.setAnimationListener(object :
             Animation.AnimationListener {
             override fun onAnimationStart(animation: Animation) {
@@ -231,7 +224,7 @@ class BlinkExpression : RelativeLayout {
             override fun onAnimationEnd(animation: Animation) {
                 isLeftMoveAnimationStarted = false
                 if (isLeftMove) {
-                    ivEyebrowLeft?.startAnimation(taLeftMove)
+                    ivEyebrowLeft?.startAnimation(taLeftMove.animation())
                 }
             }
 
@@ -246,7 +239,7 @@ class BlinkExpression : RelativeLayout {
             override fun onAnimationEnd(animation: Animation) {
                 isRightMoveAnimationStarted = false
                 if (isRightMove) {
-                    ivEyebrowRight?.startAnimation(taRightMove)
+                    ivEyebrowRight?.startAnimation(taRightMove.animation())
                 }
             }
 
@@ -263,7 +256,7 @@ class BlinkExpression : RelativeLayout {
             return
         }
         context.runOnUiThread {
-            ivEyeLeft?.startAnimation(saLeftBlink)
+            ivEyeLeft?.startAnimation(saLeftBlink.animation())
         }
     }
 
@@ -276,7 +269,7 @@ class BlinkExpression : RelativeLayout {
             return
         }
         context.runOnUiThread {
-            ivEyeRight?.startAnimation(saRightBlink)
+            ivEyeRight?.startAnimation(saRightBlink.animation())
         }
     }
 
@@ -295,7 +288,7 @@ class BlinkExpression : RelativeLayout {
             return
         }
         context.runOnUiThread {
-            ivMouth?.startAnimation(raLeftTilting)
+            ivMouth?.startAnimation(raLeftTilting.animation())
         }
     }
 
@@ -314,7 +307,7 @@ class BlinkExpression : RelativeLayout {
             return
         }
         context.runOnUiThread {
-            ivMouth?.startAnimation(raRightTilting)
+            ivMouth?.startAnimation(raRightTilting.animation())
         }
     }
 
@@ -327,7 +320,7 @@ class BlinkExpression : RelativeLayout {
             return
         }
         context.runOnUiThread {
-            ivEyebrowLeft?.startAnimation(taLeftMove)
+            ivEyebrowLeft?.startAnimation(taLeftMove.animation())
         }
     }
 
@@ -340,7 +333,7 @@ class BlinkExpression : RelativeLayout {
             return
         }
         context.runOnUiThread {
-            ivEyebrowRight?.startAnimation(taRightMove)
+            ivEyebrowRight?.startAnimation(taRightMove.animation())
         }
     }
 }
