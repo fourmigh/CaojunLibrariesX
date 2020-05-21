@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="sleep_y">0.03px</dimen>
+    <dimen name="sleep_y">0.04px</dimen>
 </resources>

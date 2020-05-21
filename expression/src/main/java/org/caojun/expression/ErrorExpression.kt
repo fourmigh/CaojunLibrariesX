@@ -18,7 +18,8 @@ class ErrorExpression : RelativeLayout {
 
     companion object {
         const val DURATION = 1000L
-        const val REPEAT_COUNT = 1
+        const val REPEAT_COUNT_ROTATING = 0
+        const val REPEAT_COUNT_BLINK = 1
     }
 
     private var ivEyebrowLeft: ImageView? = null
@@ -117,20 +118,16 @@ class ErrorExpression : RelativeLayout {
 
         //眼珠旋转
         raLeftClockwiseRotating.duration = DURATION
-        raLeftClockwiseRotating.repeatCount = REPEAT_COUNT
-        raLeftClockwiseRotating.repeatMode = Animation.START_ON_FIRST_FRAME
+        raLeftClockwiseRotating.repeatCount = REPEAT_COUNT_ROTATING
         raLeftClockwiseRotating.interpolator = LinearInterpolator()
         raLeftAntiClockwiseRotating.duration = DURATION
-        raLeftAntiClockwiseRotating.repeatCount = REPEAT_COUNT
-        raLeftAntiClockwiseRotating.repeatMode = Animation.START_ON_FIRST_FRAME
+        raLeftAntiClockwiseRotating.repeatCount = REPEAT_COUNT_ROTATING
         raLeftAntiClockwiseRotating.interpolator = LinearInterpolator()
         raRightClockwiseRotating.duration = DURATION
-        raRightClockwiseRotating.repeatCount = REPEAT_COUNT
-        raRightClockwiseRotating.repeatMode = Animation.START_ON_FIRST_FRAME
+        raRightClockwiseRotating.repeatCount = REPEAT_COUNT_ROTATING
         raRightClockwiseRotating.interpolator = LinearInterpolator()
         raRightAntiClockwiseRotating.duration = DURATION
-        raRightAntiClockwiseRotating.repeatCount = REPEAT_COUNT
-        raRightAntiClockwiseRotating.repeatMode = Animation.START_ON_FIRST_FRAME
+        raRightAntiClockwiseRotating.repeatCount = REPEAT_COUNT_ROTATING
         raRightAntiClockwiseRotating.interpolator = LinearInterpolator()
 
         val alLeft = object :
@@ -179,7 +176,7 @@ class ErrorExpression : RelativeLayout {
 
         //左眼珠缩放
         saLeftBlink.duration = DURATION
-        saLeftBlink.repeatCount = REPEAT_COUNT
+        saLeftBlink.repeatCount = REPEAT_COUNT_BLINK
         saLeftBlink.repeatMode = Animation.REVERSE
         saLeftBlink.setAnimationListener(object :
             Animation.AnimationListener {
@@ -199,7 +196,7 @@ class ErrorExpression : RelativeLayout {
 
         //右眼珠缩放
         saRightBlink.duration = DURATION
-        saRightBlink.repeatCount = REPEAT_COUNT
+        saRightBlink.repeatCount = REPEAT_COUNT_BLINK
         saRightBlink.repeatMode = Animation.REVERSE
         saRightBlink.setAnimationListener(object :
             Animation.AnimationListener {

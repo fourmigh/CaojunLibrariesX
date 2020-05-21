@@ -4,8 +4,6 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.animation.Animation
-import android.view.animation.ScaleAnimation
-import android.view.animation.TranslateAnimation
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import org.caojun.utils.ResourcesUtils
@@ -32,45 +30,57 @@ class SleepExpression : RelativeLayout {
     private var isRightMove = false
     private var isLeftMoveAnimationStarted = false
     private var isRightMoveAnimationStarted = false
-    private val taLeftMove =
-        TranslateAnimation(
-            Animation.RELATIVE_TO_PARENT,
-            0F,
-            Animation.RELATIVE_TO_PARENT,
-            0F,
-            Animation.RELATIVE_TO_PARENT,
-            0F,
-            Animation.RELATIVE_TO_PARENT,
-            ResourcesUtils.getDimension(context, R.dimen.sleep_y))
-    private val taRightMove =
-        TranslateAnimation(
-            Animation.RELATIVE_TO_PARENT,
-            0F,
-            Animation.RELATIVE_TO_PARENT,
-            0F,
-            Animation.RELATIVE_TO_PARENT,
-            0F,
-            Animation.RELATIVE_TO_PARENT,
-            ResourcesUtils.getDimension(context, R.dimen.sleep_y))
+    private val taLeftMove = AnimationManager.Builder().setTranslateAnimation(
+        Animation.RELATIVE_TO_PARENT,
+        0F,
+        Animation.RELATIVE_TO_PARENT,
+        0F,
+        Animation.RELATIVE_TO_PARENT,
+        0F,
+        Animation.RELATIVE_TO_PARENT,
+        ResourcesUtils.getDimension(context, R.dimen.sleep_y),
+        DURATION,
+        REPEAT_COUNT,
+        Animation.REVERSE
+    ).create()
+    private val taRightMove = AnimationManager.Builder().setTranslateAnimation(
+        Animation.RELATIVE_TO_PARENT,
+        0F,
+        Animation.RELATIVE_TO_PARENT,
+        0F,
+        Animation.RELATIVE_TO_PARENT,
+        0F,
+        Animation.RELATIVE_TO_PARENT,
+        ResourcesUtils.getDimension(context, R.dimen.sleep_y),
+        DURATION,
+        REPEAT_COUNT,
+        Animation.REVERSE
+    ).create()
 
     //闭嘴
     private var isMouthBlink = false
     private var isMouthBlinkAnimationStarted = false
-    private val saMouthBlink =
-        ScaleAnimation(
-            1.0f,
-            0.3f,
-            1.0f,
-            0.3f,
-            Animation.RELATIVE_TO_SELF,
-            0.5f,
-            Animation.RELATIVE_TO_SELF,
-            0.5f
-        )
+    private val saMouthBlink = AnimationManager.Builder().setScaleAnimation(
+        1.0f,
+        0.3f,
+        1.0f,
+        0.3f,
+        Animation.RELATIVE_TO_SELF,
+        0.5f,
+        Animation.RELATIVE_TO_SELF,
+        0.5f,
+        DURATION,
+        REPEAT_COUNT,
+        Animation.REVERSE
+    ).create()
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         LayoutInflater.from(context)
             .inflate(R.layout.view_expression_sleep, this, true)
 
@@ -81,9 +91,6 @@ class SleepExpression : RelativeLayout {
         ivMouth = findViewById(R.id.ivMouth)
 
         //闭嘴
-        saMouthBlink.duration = DURATION
-        saMouthBlink.repeatCount = REPEAT_COUNT
-        saMouthBlink.repeatMode = Animation.REVERSE
         saMouthBlink.setAnimationListener(object :
             Animation.AnimationListener {
             override fun onAnimationStart(animation: Animation) {
@@ -93,7 +100,7 @@ class SleepExpression : RelativeLayout {
             override fun onAnimationEnd(animation: Animation) {
                 isMouthBlinkAnimationStarted = false
                 if (isMouthBlink) {
-                    ivMouth?.startAnimation(saMouthBlink)
+                    ivMouth?.startAnimation(saMouthBlink.animation())
                 }
             }
 
@@ -101,12 +108,6 @@ class SleepExpression : RelativeLayout {
         })
 
         //眼皮上下位移
-        taLeftMove.duration = DURATION
-        taLeftMove.repeatCount = REPEAT_COUNT
-        taLeftMove.repeatMode = Animation.REVERSE
-        taRightMove.duration = DURATION
-        taRightMove.repeatCount = REPEAT_COUNT
-        taRightMove.repeatMode = Animation.REVERSE
         taLeftMove.setAnimationListener(object :
             Animation.AnimationListener {
             override fun onAnimationStart(animation: Animation) {
@@ -116,7 +117,7 @@ class SleepExpression : RelativeLayout {
             override fun onAnimationEnd(animation: Animation) {
                 isLeftMoveAnimationStarted = false
                 if (isLeftMove) {
-                    ivEyeLeft?.startAnimation(taLeftMove)
+                    ivEyeLeft?.startAnimation(taLeftMove.animation())
                 }
             }
 
@@ -131,7 +132,7 @@ class SleepExpression : RelativeLayout {
             override fun onAnimationEnd(animation: Animation) {
                 isRightMoveAnimationStarted = false
                 if (isRightMove) {
-                    ivEyeRight?.startAnimation(taRightMove)
+                    ivEyeRight?.startAnimation(taRightMove.animation())
                 }
             }
 
@@ -148,7 +149,7 @@ class SleepExpression : RelativeLayout {
             return
         }
         context.runOnUiThread {
-            ivMouth?.startAnimation(saMouthBlink)
+            ivMouth?.startAnimation(saMouthBlink.animation())
         }
     }
 
@@ -161,7 +162,7 @@ class SleepExpression : RelativeLayout {
             return
         }
         context.runOnUiThread {
-            ivEyeLeft?.startAnimation(taLeftMove)
+            ivEyeLeft?.startAnimation(taLeftMove.animation())
         }
     }
 
@@ -174,7 +175,7 @@ class SleepExpression : RelativeLayout {
             return
         }
         context.runOnUiThread {
-            ivEyeRight?.startAnimation(taRightMove)
+            ivEyeRight?.startAnimation(taRightMove.animation())
         }
     }
 }
