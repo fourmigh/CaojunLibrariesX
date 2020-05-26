@@ -250,7 +250,7 @@ class BlinkExpression : RelativeLayout {
     /**
      * 眨左眼/停止
      */
-    fun doLeftBlink() {
+    fun blinkLeftEye() {
         isLeftBlink = !isLeftBlink
         if (isLeftBlinkAnimationStarted) {
             return
@@ -263,7 +263,7 @@ class BlinkExpression : RelativeLayout {
     /**
      * 眨右眼/停止
      */
-    fun doRightBlink() {
+    fun blinkRightEye() {
         isRightBlink = !isRightBlink
         if (isRightBlinkAnimationStarted) {
             return
@@ -276,7 +276,7 @@ class BlinkExpression : RelativeLayout {
     /**
      * 左撇嘴/停止
      */
-    fun doLeftTilting() {
+    fun tiltMouthLeft() {
         isLeftTilting = !isLeftTilting
         if (isLeftTilting) {
             isRightTilting = false
@@ -295,7 +295,7 @@ class BlinkExpression : RelativeLayout {
     /**
      * 右撇嘴/停止
      */
-    fun doRightTilting() {
+    fun tiltMouthRight() {
         isRightTilting = !isRightTilting
         if (isRightTilting) {
             isLeftTilting = false
@@ -314,7 +314,7 @@ class BlinkExpression : RelativeLayout {
     /**
      * 左眉毛移动/停止
      */
-    fun doLeftMove() {
+    fun moveLeftEyebrow() {
         isLeftMove = !isLeftMove
         if (isLeftMoveAnimationStarted) {
             return
@@ -327,7 +327,7 @@ class BlinkExpression : RelativeLayout {
     /**
      * 右眉毛移动/停止
      */
-    fun doRightMove() {
+    fun moveRightEyebrow() {
         isRightMove = !isRightMove
         if (isRightMoveAnimationStarted) {
             return

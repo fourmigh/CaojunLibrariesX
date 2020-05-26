@@ -12,39 +12,39 @@ class ExpressionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_expression)
 
         btnLeft.setOnClickListener {
-            blinkExpression.doLeftBlink()
-            blinkExpression.doLeftTilting()
-            blinkExpression.doLeftMove()
+            blinkExpression.blinkLeftEye()
+            blinkExpression.tiltMouthLeft()
+            blinkExpression.moveLeftEyebrow()
         }
 
         btnRight.setOnClickListener {
-            blinkExpression.doRightBlink()
-            blinkExpression.doRightTilting()
-            blinkExpression.doRightMove()
+            blinkExpression.blinkRightEye()
+            blinkExpression.tiltMouthRight()
+            blinkExpression.moveRightEyebrow()
         }
 
         btnBlinkLeft.setOnClickListener {
-            blinkExpression.doLeftBlink()
+            blinkExpression.blinkLeftEye()
         }
 
         btnBlinkRight.setOnClickListener {
-            blinkExpression.doRightBlink()
+            blinkExpression.blinkRightEye()
         }
 
         btnMouthLeft.setOnClickListener {
-            blinkExpression.doLeftTilting()
+            blinkExpression.tiltMouthLeft()
         }
 
         btnMouthRight.setOnClickListener {
-            blinkExpression.doRightTilting()
+            blinkExpression.tiltMouthRight()
         }
 
         btnEyebrowLeft.setOnClickListener {
-            blinkExpression.doLeftMove()
+            blinkExpression.moveLeftEyebrow()
         }
 
         btnEyebrowRight.setOnClickListener {
-            blinkExpression.doRightMove()
+            blinkExpression.moveRightEyebrow()
         }
     }
 }
