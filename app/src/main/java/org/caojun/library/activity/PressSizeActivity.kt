@@ -2,6 +2,7 @@ package org.caojun.library.activity
 
 import android.os.Bundle
 import android.util.Log
+import android.util.TypedValue
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_press_size.*
 import org.caojun.library.R
@@ -21,6 +22,7 @@ class PressSizeActivity : AppCompatActivity() {
 
         checkbox.setOnCheckedChangeListener { buttonView, isChecked ->
             Log.d("PressSizeActivity", "checkbox.setOnCheckedChangeListener: $isChecked")
+            checkbox.setTextSize(TypedValue.COMPLEX_UNIT_SP, if (isChecked) 20F else 16F)
         }
     }
 }

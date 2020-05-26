@@ -45,4 +45,10 @@
         android:textSize="16sp"
         app:textSizePressed="20sp" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World TextView"
+        android:textSize="16sp" />
+
 </LinearLayout>

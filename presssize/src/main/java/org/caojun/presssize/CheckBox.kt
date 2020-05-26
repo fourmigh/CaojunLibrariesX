@@ -1,5 +1,6 @@
 package org.caojun.presssize
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import android.util.TypedValue
@@ -15,6 +16,7 @@ class CheckBox : androidx.appcompat.widget.AppCompatCheckBox {
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?): this(context, attrs, androidx.appcompat.R.attr.checkboxStyle)
+    @SuppressLint("CustomViewStyleable")
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int): super(context, attrs, defStyleAttr) {
         val t = context.obtainStyledAttributes(attrs, R.styleable.PressSize)
 
