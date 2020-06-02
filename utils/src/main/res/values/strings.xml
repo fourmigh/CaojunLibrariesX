@@ -2,4 +2,6 @@
 <resources>
     <string name="copy_name">%s - Copy</string>
     <string name="copy_name_copy">%s (%d)</string>
+    <string name="punctuation_mark">, </string>
+    <string name="and_so_on"> and so on</string>
 </resources>
