@@ -83,10 +83,9 @@ class WaterRippleView : AppCompatImageView {
 //        G = if (G.length == 1) "0$G" else G
 //        B = if (B.length == 1) "0$B" else B
 //        return "#$A$R$G$B"
-        val sb = StringBuffer()
-        sb.append("#")
+        val sb = StringBuffer("#")
         while (sb.length < 8) {
-            var color = Integer.toHexString(getRandom(0, 255)).toUpperCase()
+            var color = Integer.toHexString(getRandom(0, 255))
             color = if (color.length == 1) "0$color" else color
             sb.append(color)
         }
