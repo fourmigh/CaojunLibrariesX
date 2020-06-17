@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ToggleButton
+            android:id="@+id/tbClockwise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/clockwise_true"
+            android:textOff="@string/clockwise_false" />
+
+        <ToggleButton
+            android:id="@+id/tbSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/accelerate"
+            android:textOff="@string/linear" />
+
+    </LinearLayout>
+
+    <org.caojun.animation.TaijiView
+        android:id="@+id/taijiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

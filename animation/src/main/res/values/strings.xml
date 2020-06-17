@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="clockwise_true">Clockwise</string>
+    <string name="clockwise_false">Anti-Clockwise</string>
+    <string name="duration">Duration(ms)</string>
+    <string name="rotation_angle">Rotation Angle(°)</string>
+    <string name="accelerate">Accelerate</string>
+    <string name="linear">Linear</string>
+</resources>

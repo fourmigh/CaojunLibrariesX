@@ -33,17 +33,25 @@ class WaterRippleView : AppCompatImageView {
 //                            setBackgroundColor(waterRipple.color)
 //                        }
 //                    }
-                    if (waterRipple.radius < waterRipple.maxRadius) {
-                        waterRipple.radius++
+                    when {
+                        waterRipple.radius < waterRipple.maxRadius -> {
+                            waterRipple.radius++
+                        }
+                        waterRipple.life > 0 -> {
+                            waterRipple.life --
+                        }
+                        listWaterRipple.size > 47 -> {
+                            listWaterRipple.remove(waterRipple)
+                        }
                     }
                 }
                 invalidate()
-                Thread.sleep(10)
+                Thread.sleep(1)
             }
         }
     }
 
-    private class WaterRipple(val center: Point, val maxRadius: Int, val color: Int, var radius: Int = 0)
+    private class WaterRipple(val center: Point, val maxRadius: Int, val color: Int, var radius: Int = 0, var life: Int = maxRadius)
 
     private val listWaterRipple = ArrayList<WaterRipple>()
     private val paint = Paint()

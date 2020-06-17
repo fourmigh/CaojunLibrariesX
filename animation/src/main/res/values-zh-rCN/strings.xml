@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="clockwise_true">顺时针</string>
+    <string name="clockwise_false">逆时针</string>
+    <string name="duration">单次时间(ms)</string>
+    <string name="rotation_angle">旋转度数(°)</string>
+    <string name="accelerate">加速</string>
+    <string name="linear">匀速</string>
+</resources>
