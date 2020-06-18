@@ -53,4 +53,5 @@ dependencies {
     implementation project(':expression')
     implementation project(':presssize')
     implementation project(':animation')
+    implementation project(':room')
 }

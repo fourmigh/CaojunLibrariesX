@@ -23,7 +23,20 @@
             android:textOn="@string/accelerate"
             android:textOff="@string/linear" />
 
+        <Button
+            android:id="@+id/btnDuration"
+            android:text="@string/duration"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
+
+    <EditText
+        android:visibility="gone"
+        android:id="@+id/editText"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <org.caojun.animation.TaijiView
         android:id="@+id/taijiView"

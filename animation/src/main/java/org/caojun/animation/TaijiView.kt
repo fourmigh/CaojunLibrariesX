@@ -20,7 +20,7 @@ class TaijiView : AppCompatImageView {
     //单次时间
     var duration = 2000L
     //旋转度数
-    var rotationAngle = 360F
+    var rotationAngle = 359F
 
     constructor(context: Context?) : this(context, null)
     constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs, 0)
@@ -46,7 +46,6 @@ class TaijiView : AppCompatImageView {
             objectAnimator.interpolator = AccelerateDecelerateInterpolator()
         }
         objectAnimator.duration = duration
-        objectAnimator.repeatMode = ValueAnimator.RESTART
         objectAnimator.addListener(object : AnimatorListenerAdapter() {
             override fun onAnimationEnd(animation: Animator?, isReverse: Boolean) {
                 startAnimation()
