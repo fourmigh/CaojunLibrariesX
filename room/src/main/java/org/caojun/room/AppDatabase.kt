@@ -35,7 +35,7 @@ abstract class AppDatabase : RoomDatabase() {
 
         private val MIGRATION_1_2: Migration = object : Migration(1, 2) {
             override fun migrate(database: SupportSQLiteDatabase) {
-                //在表app中添加Double字段cache
+                //在表App中添加INTEGER字段cache
                 database.execSQL(
                     "ALTER TABLE App"
                             + " ADD COLUMN cache INTEGER NOT NULL DEFAULT 0"
