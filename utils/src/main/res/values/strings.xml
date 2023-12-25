@@ -4,4 +4,6 @@
     <string name="copy_name_copy">%s (%d)</string>
     <string name="punctuation_mark">, </string>
     <string name="and_so_on"> and so on</string>
+    <!-- 剪切板 -->
+    <string name="clipboard_alert">"%s" has been copied to the Clipboard.</string>
 </resources>

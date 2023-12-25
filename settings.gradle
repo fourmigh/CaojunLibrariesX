@@ -5,3 +5,4 @@ include ':app', ':adapter', ':dialog', ':klog', ':seekbar', ':rangeseekbar', ':d
 include ':sinogram'
 include ':utils'
 include ':presssize'
+include ':widget'

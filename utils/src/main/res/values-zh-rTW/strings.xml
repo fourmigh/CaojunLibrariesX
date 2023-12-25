@@ -4,4 +4,6 @@
     <string name="copy_name_copy">%s (%d)</string>
     <string name="punctuation_mark">、</string>
     <string name="and_so_on">等</string>
+    <!-- 剪切板 -->
+    <string name="clipboard_alert">“%s”已複製到剪切板。</string>
 </resources>
